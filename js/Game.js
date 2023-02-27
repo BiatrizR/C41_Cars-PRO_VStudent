@@ -165,17 +165,9 @@ class Game {
       }
       this.handlePlayerControls();
 
-      //5.criar contante de linha de chegada que termina antes do altura da tela
-      const finshLine = height * 6 -100;
-      //5.1 condição para que se o jogador passar da linha o stado do jogo muda e o rank tbm
-      //além disso vamos exibir o rank o upadate
-      if(player.positionY > finshLine){
-        gameState = 2;
-        player.rank +=1;
-        Player.updateCarsAtEnd(player.rank);
-        player.update();
-        this.showRank();
-      }
+     
+     
+  
       
 
       drawSprites();
@@ -188,8 +180,8 @@ class Game {
         playerCount: 0,
         gameState: 0,
         players: {},
-        //4. redefinir o novo campo no banco de dados para 0 quando resetar
-        carsAtEnd: 0,
+        //redefinir o novo campo no banco de dados para 0 quando resetar
+       
       });
       window.location.reload();
     });
