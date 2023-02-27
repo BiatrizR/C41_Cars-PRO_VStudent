@@ -67,22 +67,18 @@ class Player {
     });
   }
 
-  //c41-1 escrever função para ler quando o jogador chegar ao final no banco de dados
+  
   getCarsAtEnd() {
     // crie a função aqui
-    database.ref("carsAtEnd").on("value", data =>{
-    this.rank = data.val();
-    });
-  }
 
-  //2- função que pega todos os jogadores e uma estática para atualizar o
+  }
+  
+
 //campo CarsAtEnd com o número de carros que terminaram a corrida
   static updateCarsAtEnd(rank) {
     // crie a função aqui
-    database.ref("/").update({
-    CarsAtEnd: rank
-    });
+  
 
-//3. após finalizar chamar a function em play no game.js
+
   }
 }
